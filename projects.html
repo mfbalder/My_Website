@@ -88,6 +88,8 @@
 			margin-top: 20px;
 			margin-left: 0;
 			padding: 5px;
+			display: inline-block;
+			vertical-align: top;
 		}
 
 		#sidebar > h3 {
@@ -103,6 +105,20 @@
 		#sidebar li {
 			list-style: none;
 			margin-top: 10px;
+		}
+
+		#display-project {
+			background-color: black;
+			display: inline-block;
+			width: 73%;
+			vertical-align: top;
+			margin-top: 20px;
+			margin-left: 8px;
+		}
+
+		#display-project > iframe {
+			margin-left: 63px;
+			margin-top: 15px;
 		}
 		
 
@@ -132,6 +148,7 @@
 		</ul>
 	</div>
 	
+
 	<div id="sidebar">
 		<h3>Projects</h3>
 		<ul>
@@ -139,6 +156,12 @@
 			<li><a href="#">SF Dining-Out Tracker</a></li>
 		</ul>
 	</div>
+
+	<div id="display-project">
+		<a class="twitter-timeline" href="https://twitter.com/burgersandrec" data-widget-id="526161320085700609">Tweets by @burgersandrec</a>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	</div>
+
 		
 	
 
