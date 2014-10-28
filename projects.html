@@ -4,7 +4,7 @@
 	<title>MickiBalder.com</title>
 	<style>
 	
-		body{
+		body {
 			width: 900px;
 			margin: auto;
 			font-family: "Lucida Grande";
@@ -107,7 +107,7 @@
 			margin-top: 10px;
 		}
 
-		#display-project {
+		.display-project {
 			background-color: black;
 			display: inline-block;
 			width: 73%;
@@ -116,10 +116,28 @@
 			margin-left: 8px;
 		}
 
-		#display-project > iframe {
+		.display-project > iframe {
 			margin-left: 63px;
 			margin-top: 15px;
 		}
+
+		.display-project > div {
+			margin: 5px auto;
+			text-align: center;
+			width: 70%;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+
+
+
+/*		* { color: red; }
+		div { color: blue;}
+		#theform { color: pink;}
+*/
 		
 
 
@@ -152,14 +170,37 @@
 	<div id="sidebar">
 		<h3>Projects</h3>
 		<ul>
-			<li><a href="#">Twitterbot</a></li>
-			<li><a href="#">SF Dining-Out Tracker</a></li>
+			<li><a id="twitterbot" href="#">Twitterbot</a></li>
+			<li><a id="dining-out"href="#">SF Dining-Out Tracker</a></li>
 		</ul>
 	</div>
 
-	<div id="display-project">
+	<div id="display-project" class="hidden display-project">
+		<div id="project-description">
+			<p>Used Markov chain analysis to compile multiple corpuses and generate Twitter tweets in the style of a combination of both texts. Please see my github account (mfbalder) for more details.</p>
+		</div>
 		<a class="twitter-timeline" href="https://twitter.com/burgersandrec" data-widget-id="526161320085700609">Tweets by @burgersandrec</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<script>
+			!function(d,s,id){
+				var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+				if(!d.getElementById(id)){
+					js=d.createElement(s);
+					js.id=id;
+					js.src=p+"://platform.twitter.com/widgets.js";
+					fjs.parentNode.insertBefore(js,fjs);
+				}
+			}
+			(document,"script","twitter-wjs");
+		// </script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			$("#twitterbot").click(function(){
+				$(".display-project").removeClass("hidden");
+			});
+			$("#dining-out").click(function(){
+				$(".display-project").addClass("hidden");
+			});
+		</script>
 	</div>
 
 		
